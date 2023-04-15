@@ -6,7 +6,7 @@ export const data = [
             last: 'Smith',
         },
         email: 'jeansmith@gmail.com',
-        typeof: 'charger de filière',
+        poste: 'charger de filière',
         position: 'first place',
     },
     {
@@ -16,7 +16,7 @@ export const data = [
             last: 'Adams',
         },
         email: 'saraadams@gmail.com',
-        typeof: 'chef de département',
+        poste: 'chef de département',
         position: 'third place',
     },
     {
@@ -26,8 +26,9 @@ export const data = [
             last: 'Smith',
         },
         email: 'pierresmith@gmail.com',
-        typeof: 'responsable des EDT',
+        poste: 'responsable des EDT',
         position: 'second place',
+        //action: 'modifier', 'supprimer', 'voir details',
     },
     {
         id:1,
@@ -36,7 +37,7 @@ export const data = [
             last: 'Adams',
         },
         email: 'dorianadams@gmail.com',
-        typeof: 'charger de filière',
+        poste: 'charger de filière',
         position: 'fourth place',
     },
 ]
