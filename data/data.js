@@ -7,6 +7,7 @@ export const data = [
         },
         email: 'jeansmith@gmail.com',
         typeof: 'charger de filière',
+        position: 'first place',
     },
     {
         id:2,
@@ -16,6 +17,7 @@ export const data = [
         },
         email: 'saraadams@gmail.com',
         typeof: 'chef de département',
+        position: 'third place',
     },
     {
         id:3,
@@ -25,6 +27,7 @@ export const data = [
         },
         email: 'pierresmith@gmail.com',
         typeof: 'responsable des EDT',
+        position: 'second place',
     },
     {
         id:1,
@@ -34,5 +37,6 @@ export const data = [
         },
         email: 'dorianadams@gmail.com',
         typeof: 'charger de filière',
+        position: 'fourth place',
     },
 ]
