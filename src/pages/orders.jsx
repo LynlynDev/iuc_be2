@@ -13,8 +13,8 @@ const orders = () => {
         <div className="w-full m-auto p-4 border rounded-lg bg-white overflow-y-auto">
           <div className="my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer">
             <span>Order</span>
-            <span className="sm:text-left text-right"> Statut</span>
-            <span className="hidden md:grid">Last Order</span>
+            <span className="sm:text-left text-right"> Status</span>
+            <span className="hidden md:grid">Position</span>
             <span className="hidden sm:grid">Method</span>
           </div>
           <ul>
@@ -33,22 +33,28 @@ const orders = () => {
                       {order.name.first + " " + order.name.last}
                     </p>
                     <p className="text-gray-800 font-bold">
-                      {order.position.toLocaleString()}
+                      {order.email.toLocaleString()}
                     </p>
                   </div>
                 </div>
-                <p className='text-gray-600 sm:text-left text-right'>
-                  <span className={
-                    order.poste= 'Processing' 
-                    ? 'bg-green-300 p-2 rounded-lg'
-                    : order.poste == 'Completed' 
-                    ? 'bg-blue-400 p-2 rounded-lg'
-                    : 'bg-yellow-200 p-2 rounded-lg' 
-                }
-                >
-                    {order.poste}
-                </span>
+                <p className="text-gray-600 sm:text-left text-right">
+                  <span
+                    className={
+                      order.poste == "Processing"
+                        ? "bg-green-300 p-2 rounded-lg"
+                        : order.poste == "Completed"
+                        ? "bg-blue-500 p-2 rounded-lg"
+                        : "bg-yellow-200 p-2 rounded-lg"
+                    }
+                  >
+                    {order.poste} {/** pour la colonne status */}
+                  </span>
                 </p>
+                <p className="hidden md:flex">{order.id}</p>
+                <div className="sm:flex hidden justify-between items-center">
+                  <p>{order.position}</p>
+                  <BsThreeDotsVertical />
+                </div>
               </li>
             ))}
           </ul>

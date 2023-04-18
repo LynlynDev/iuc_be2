@@ -1,5 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { BsFillPersonPlusFill } from 'react-icons/bs'
+
+import Table from '../components/table'
+import Form from '../components/form'
 
 import Header from '../components/Header'
 import TopCards from '../components/TopCards'
@@ -16,13 +20,35 @@ export default function Home() {
       <meta name='viewport' content='width=device-width, initial-scale=1'/>
       <link rel='icon' href='/favicon.ico' />
       </Head>
-    <main className='bg-gray-100 min-h-screen'>
+    {/* <main className='bg-gray-100 min-h-screen'>
     <Header />
     <TopCards />
     <div className='p-4 grid md:grid-cols-3 grid-cols-1 gap-4'>
       <BarChart />
       <RecentOrders />
     </div>
+    </main> */}
+
+    <main className='py-5'>
+      <h1 className='text-xl md:text-3xl text-center font-bold py-5'>
+        EMPLOYEES MANAGEMENT</h1>
+        <div className='container mx-auto flex justify-between py-5 border-b'>
+            <div className='left flex gap-3'>
+              <button className='flex bg-purple-700 text-white px-3 py-2 border rounded-md hover:bg-gray-50 hover:border-indigo-500 hover:text-gray-800 '>
+                Add Employee <span className='px-1'><BsFillPersonPlusFill size={23}/></span>
+              </button>
+            </div>
+        </div>
+
+        {/* collapsable form */}
+        <div className='container mx-auto'>
+        <Form></Form>
+        </div>
+        {/* table */}
+        <div className='container mx-auto'>
+          <Table></Table>
+        </div>
+        
     </main>
     </>
   );

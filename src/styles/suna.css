@@ -2,11 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   margin: auto;
   padding: 0;
+} */
+
+*>*{
+  font-family: 'Times New Roman', Times, serif;
 }
 
+a{
+  color: inherit;
+  text-decoration: dashed;
+}
+
+*{
+  box-sizing: border-box;
+}
 
 
 
