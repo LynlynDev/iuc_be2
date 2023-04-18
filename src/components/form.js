@@ -1,5 +1,7 @@
 import React from "react";
 import { useReducer } from "react";
+import { BiPlus } from "react-icons/bi";
+import Success  from "../components/success";
 
 const formReducer = (state,event)=> {
     return{
@@ -11,13 +13,17 @@ const formReducer = (state,event)=> {
 const Form = () => {
     const [formData, setFormData] = useReducer(formReducer,{})
 
-    const handlerSubmit = (e) => {
-    e.preventDefalut();
+    const handleSubmit = (e) => {
+    e.preventDefault();
+    if(Object.keys(formData).length==0) return console.log("Don't have Form Data")
     console.log(formData)
-    
     }
+
+    if(Object.keys(formData).length>0)return <Success></Success>
+
+
   return (
-    <form className="grid lg:grid-cols-2 w-4/6 gap-4" onSubmit={handlerSubmit}>
+    <form className="grid lg:grid-cols-2 w-4/6 gap-4" onSubmit={handleSubmit}>
       <div className="input-type">
         <input
           type="text"
@@ -98,7 +104,9 @@ const Form = () => {
         </div>
       </div>
 
-      <button className="flex justify-center text-md w-2/6 bg-green-500 text-white px-4 py-2 border rounded-md hover:bg-gray-50 hover:border-green-500 hover:text-green-500">Add</button>
+      <button className="flex justify-center text-md w-2/6 bg-green-500 text-white px-4 py-2 border rounded-md hover:bg-gray-50 hover:border-green-500 hover:text-green-500">
+        Add <span className="px-1"><BiPlus size={22}/></span>
+        </button>
     </form>
   );
 };

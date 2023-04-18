@@ -6,7 +6,7 @@ const Table = () =>{
     return(
         <table className="min-w-full table-auto">
             <thead>
-                <tr className='bg-gray-300 cursor-pointer'>
+                <tr className='bg-slate-300 cursor-pointer'>
                     <th className='px-8 py-2'>
                         <span className='text-gray-700'>Name</span>
                     </th>
@@ -29,14 +29,14 @@ const Table = () =>{
                 </tr>
             </thead>
             <tbody className='bg-gray-200'>
-                <tr className='bg-gray-50 text-center'>
+                <tr className='bg-gray-200 text-center'>
                     <td className='xp-16 py-2 items-center'>
                         <img src="#" alt="" />
                         <span className='text-center ml-2 font-semibold'>Sara Adams</span>
                     </td>
 
                     <td className='xp-16 py-2 items-center'>
-                        <span>saraadams@gmail.com</span>
+                        <span className="text-gray-700 sm:text-left text-right">saraadams@gmail.com</span>
                     </td>
 
                     <td className='xp-16 py-2 items-center'>
