@@ -19,7 +19,7 @@ const Form = () => {
     console.log(formData)
     }
 
-    if(Object.keys(formData).length>0)return <Success></Success>
+    if(Object.keys(formData).length>0)return <Success message={"Data Added"}></Success>
 
 
   return (
