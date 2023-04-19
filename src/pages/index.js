@@ -1,17 +1,22 @@
-import Head from 'next/head'
 import Image from 'next/image'
-import { BsFillPersonPlusFill } from 'react-icons/bs'
-
-import Table from '../components/table'
-import Form from '../components/form'
-
 import Header from '../components/Header'
 import TopCards from '../components/TopCards'
 import BarChart from '../components/BarChart'
 import RecentOrders from '../components/RecentOrders'
 
+import Head from 'next/head'
+import { BsFillPersonPlusFill } from 'react-icons/bs'
+import Table from '../components/table'
+import Form from '../components/form'
+import { useState } from 'react'
+
 
 export default function Home() {
+  const[visible,setVisible]= useState(false)
+
+  const handler =()=>{
+    setVisible(!visible)
+  }
   return (
     <>
     <Head>
@@ -34,7 +39,7 @@ export default function Home() {
         EMPLOYEES MANAGEMENT</h1>
         <div className='container mx-auto flex justify-between py-5 border-b'>
             <div className='left flex gap-3'>
-              <button className='flex bg-purple-700 text-white px-3 py-2 border rounded-md hover:bg-gray-50 hover:border-indigo-500 hover:text-gray-800 '>
+              <button onClick={handler} className='flex bg-purple-700 text-white px-3 py-2 border rounded-md hover:bg-gray-50 hover:border-indigo-500 hover:text-gray-800 '>
                 Add Employee <span className='px-1'><BsFillPersonPlusFill size={23}/></span>
               </button>
             </div>
@@ -42,7 +47,7 @@ export default function Home() {
 
         {/* collapsable form */}
         <div className='container mx-auto'>
-        <Form></Form>
+        {visible ? <Form></Form>:<></>}
         </div>
         {/* table */}
         <div className='container mx-auto'>
