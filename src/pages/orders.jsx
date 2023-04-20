@@ -4,7 +4,7 @@ import { BsThreeDotsVertical, BsPersonFill } from "react-icons/bs";
 
 const orders = () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 min-h-screen -ml-20">
       <div className="flex justify-between px-4 pt-4">
         <h2>Orders</h2>
         <h2>Welcome Back, Clint</h2>

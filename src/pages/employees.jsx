@@ -4,13 +4,13 @@ import { BsPersonFill, BsThreeDotsVertical } from "react-icons/bs";
 
 const employees = () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
-      <div className="flex justify-between p-4">
-        <h2>Employees</h2>
+    <div className="bg-gray-100 h-screen -ml-20">
+      <div className="flex justify-between p-4 ">
+        <h2 className="flex justify-center pb-3 left-4 m-auto font-bold text-3xl">List of Employees</h2>
         <h2>Welcome Back, CLint</h2>
       </div>
-      <div className="p-4">
-        <div className="w-full m-auto p-4 border rounded-lg bg-slate-300 overflow-y-auto">
+      <div className="p-10">
+        <div className="w-full p-14 border rounded-lg bg-slate-300 overflow-y-auto">
           <div className="my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer">
             <span>Name</span>
             <span className="sm:text-left text-right">Email</span>
