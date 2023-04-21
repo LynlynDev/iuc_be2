@@ -20,5 +20,10 @@ a{
   box-sizing: border-box;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 1rem;
+}
 
 

@@ -1,30 +1,13 @@
 import React from "react";
 import Link from "next/link";
+import Head from "next/head";
 
 const Header = () => {
   return (
     <div>
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <Link href="/Accueil">
-               
-              </Link>
-            </li>
-            <li>
-              <Link href="/directions">
-               
-              </Link>
-            </li>
-            <li>
-              <Link href="/employes">
-                
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <Head>
+        
+        </Head>
     </div>
   );
 };
